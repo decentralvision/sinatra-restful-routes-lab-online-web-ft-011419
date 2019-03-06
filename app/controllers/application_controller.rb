@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipes' do
-    binding.pry
+    @all = Recipe.all
     erb :index
   end
 
